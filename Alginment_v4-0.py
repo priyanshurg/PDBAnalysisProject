@@ -16,6 +16,10 @@ from scipy.linalg import orthogonal_procrustes
 import numpy as np
 test= 0
 
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
+warnings.simplefilter(action='ignore', category=DeprecationWarning)
+warnings.simplefilter(action='ignore', category=Warning)
 
 '''
 This is an implementation of a Partial Procrustes analysis where the shape of all the other 
