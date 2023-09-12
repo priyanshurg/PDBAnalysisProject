@@ -5,7 +5,7 @@ Created on Tue Sep 12 02:58:44 2023
 
 @author: pgupta
 """
-numcluster = 4 # Edit the number here between 3-6 to see plots of the k-means ...
+numcluster = 6 # Edit the number here between 3-6 to see plots of the k-means ...
                 # ... clustering based on coordination number data 
                 
                 
@@ -37,8 +37,7 @@ labels = kmeans.labels_
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 
-fig2 = plt.figure()
-ax2 = fig2.add_subplot(111, projection='3d')
+
 
 ox = 0
 oy = 0
@@ -55,9 +54,11 @@ ax.set_zlabel('Z')
 ax.scatter(ox,oy,oz,c = 'black', label = 'Origin')
 
 plt.legend()
-plt.title("K-Means Clustering in 3D")
+title ="K-Means Clustering in 3D: numclusters = "+str(numcluster)
+plt.title(title)
 
-
+fig2 = plt.figure()
+ax2 = fig2.add_subplot(111, projection='3d')
 ax2.scatter(cluster_centers[:, 0], cluster_centers[:, 1], cluster_centers[:, 2], marker='x', s=200, c='red', label='Centroids')
 ax2.set_xlabel('X')
 ax2.set_ylabel('Y')
@@ -66,5 +67,5 @@ ax2.scatter(ox,oy,oz,c = 'black', label = 'Origin')
 
 
 plt.legend()
-plt.title("K-Means Clustering in 3D")
+plt.title(title)
 plt.show()
