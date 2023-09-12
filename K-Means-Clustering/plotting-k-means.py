@@ -5,8 +5,9 @@ Created on Tue Sep 12 02:58:44 2023
 
 @author: pgupta
 """
-numcluster = 6 # Edit the number here between 3-6 to see plots of the k-means ...
-                # ... clustering based on coordination number data 
+numcluster = 4 # Edit the number here between 3-6 to see plots of the k-means ...
+                # ... clustering based on coordination number data, The numcluster  
+                # value will also affect the coordination number used for clustering.
                 
                 
                 
